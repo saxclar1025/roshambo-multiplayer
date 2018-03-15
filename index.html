@@ -10,7 +10,40 @@
     <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
 </head>
 <body>
+    <header class="text-center">
+        <h1>Roshambo!!!</h1>
+    </header>
 
+    <div id="player-div" class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center">
+                <form>
+                    <input type="text" id="name-input" value="Name">
+                    <button type="submit" id="name-submit">Start</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-div" class="container-fluid text-center">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <div id="player1-div" class="border">
+                    Waiting for Player 1
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <div id="result-div" class="border">
+                    
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <div id="player2-div" class="border">
+                    Waiting for Player 2
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script type="text/javascript" src="assets/javascript/app.js"></script>
 </html>

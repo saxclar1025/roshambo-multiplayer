@@ -8,3 +8,39 @@ var config = {
   };
 firebase.initializeApp(config);
 var database = firebase.database();
+
+const choices = ["Rock", "Paper", "Scissors"];
+
+var Player = function(name){
+    this.name = name;
+    this.wins = 0;
+    this.losses = 0;
+    this.choice = null;
+};
+
+var game = {
+    players: [],
+
+    addPlayer: function(name){
+        if (players.length > 2) {
+            return;
+        }
+        players.push(new Player(name));
+    },
+
+    removePlayer: function(n){
+        delete players[n];
+    },
+
+    evaluateChoices: function(){
+        if(players[0].choice === players[1].choice) {
+            //draw
+        }
+        if((3 + players[0].choice - players[1].choice) % 3 === 1 ) {
+            //players[0] wins
+        }
+        else {
+            //players[1] wins
+        }
+    }
+};
