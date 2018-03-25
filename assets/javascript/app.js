@@ -18,25 +18,29 @@ var Player = function(name){
     this.choice = null;
 };
 
+var gameUI = {
+    $
+};
+
 var game = {
     players: [],
 
     addPlayer: function(name){
-        if (players.length > 2) {
+        if (this.players.length > 1) {
             return;
         }
-        players.push(new Player(name));
+        this.players.push(new Player(name));
     },
 
     removePlayer: function(n){
-        delete players[n];
+        this.players.splice(n,1);
     },
 
     evaluateChoices: function(){
-        if(players[0].choice === players[1].choice) {
+        if(this.players[0].choice === this.players[1].choice) {
             //draw
         }
-        if((3 + players[0].choice - players[1].choice) % 3 === 1 ) {
+        if((3 + this.players[0].choice - this.players[1].choice) % 3 === 1 ) {
             //players[0] wins
         }
         else {
