@@ -1,0 +1,22 @@
+body {
+    background-color: #FDD;
+}
+
+#player1-div, #player2-div {
+    height: 200px;
+}
+
+#result-div {
+    min-height: 70px;
+}
+
+#chat-display {
+    overflow: scroll;
+    min-height: 200px;
+    background-color: #FFF;
+}
+
+#game-div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
